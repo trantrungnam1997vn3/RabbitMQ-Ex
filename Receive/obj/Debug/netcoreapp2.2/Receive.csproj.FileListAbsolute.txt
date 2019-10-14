@@ -1,0 +1,11 @@
+D:\Test-Task\Receive\obj\Debug\netcoreapp2.2\Receive.csprojAssemblyReference.cache
+D:\Test-Task\Receive\obj\Debug\netcoreapp2.2\Receive.csproj.CoreCompileInputs.cache
+D:\Test-Task\Receive\obj\Debug\netcoreapp2.2\Receive.AssemblyInfoInputs.cache
+D:\Test-Task\Receive\obj\Debug\netcoreapp2.2\Receive.AssemblyInfo.cs
+D:\Test-Task\Receive\bin\Debug\netcoreapp2.2\Receive.deps.json
+D:\Test-Task\Receive\bin\Debug\netcoreapp2.2\Receive.runtimeconfig.json
+D:\Test-Task\Receive\bin\Debug\netcoreapp2.2\Receive.runtimeconfig.dev.json
+D:\Test-Task\Receive\bin\Debug\netcoreapp2.2\Receive.dll
+D:\Test-Task\Receive\bin\Debug\netcoreapp2.2\Receive.pdb
+D:\Test-Task\Receive\obj\Debug\netcoreapp2.2\Receive.dll
+D:\Test-Task\Receive\obj\Debug\netcoreapp2.2\Receive.pdb

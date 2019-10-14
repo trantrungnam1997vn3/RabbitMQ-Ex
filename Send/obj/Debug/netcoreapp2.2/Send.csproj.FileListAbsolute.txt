@@ -1,0 +1,11 @@
+D:\Test-Task\Send\bin\Debug\netcoreapp2.2\Send.deps.json
+D:\Test-Task\Send\bin\Debug\netcoreapp2.2\Send.runtimeconfig.json
+D:\Test-Task\Send\bin\Debug\netcoreapp2.2\Send.runtimeconfig.dev.json
+D:\Test-Task\Send\bin\Debug\netcoreapp2.2\Send.dll
+D:\Test-Task\Send\bin\Debug\netcoreapp2.2\Send.pdb
+D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.csprojAssemblyReference.cache
+D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.csproj.CoreCompileInputs.cache
+D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.AssemblyInfoInputs.cache
+D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.AssemblyInfo.cs
+D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.dll
+D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.pdb
