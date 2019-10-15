@@ -10,14 +10,12 @@ namespace Send
     {
         public static void Main(string[] args)
         {
-            var factory = new ConnectionFactory() { HostName = "10.0.1.222", Port = 5672, UserName = "admin", Password = "admin", VirtualHost = "/" };
+            var factory = new ConnectionFactory() { HostName = "localhost", Port = 5672, UserName = "admin", Password = "admin", VirtualHost = "/" };
 
 
             MethodSendWithTopic(args, factory);
             // MethodSend1(args, factory);
 
-            Console.WriteLine(" Press [enter] to exit.");
-            Console.ReadLine();
         }
 
         private static string GetMessage(string[] args)
@@ -44,6 +42,9 @@ namespace Send
                                      basicProperties: null,
                                      body: body);
                 Console.WriteLine(" [x] Sent '{0}':'{1}'", routingKey, message);
+
+            Console.WriteLine(" Press [enter] to exit.");
+            Console.ReadLine();
             }
         }
 
