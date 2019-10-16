@@ -719,11 +719,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Test-Task\\RPCServer\\RPCServer.csproj",
+      "projectUniqueName": "D:\\Test-Task\\RPCServer\\RPCServer.csproj",
       "projectName": "RPCServer",
-      "projectPath": "d:\\Test-Task\\RPCServer\\RPCServer.csproj",
+      "projectPath": "D:\\Test-Task\\RPCServer\\RPCServer.csproj",
       "packagesPath": "C:\\Users\\Nam\\.nuget\\packages\\",
-      "outputPath": "d:\\Test-Task\\RPCServer\\obj\\",
+      "outputPath": "D:\\Test-Task\\RPCServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
