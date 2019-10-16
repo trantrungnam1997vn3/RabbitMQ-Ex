@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Test-Task\\Client-API\\Client-API.csproj": {}
+    "d:\\TEST-DEMO\\RabbitMQ-Ex\\Client-API\\Client-API.csproj": {}
   },
   "projects": {
-    "D:\\Test-Task\\Client-API\\Client-API.csproj": {
+    "d:\\TEST-DEMO\\RabbitMQ-Ex\\Client-API\\Client-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Test-Task\\Client-API\\Client-API.csproj",
+        "projectUniqueName": "d:\\TEST-DEMO\\RabbitMQ-Ex\\Client-API\\Client-API.csproj",
         "projectName": "Client-API",
-        "projectPath": "D:\\Test-Task\\Client-API\\Client-API.csproj",
-        "packagesPath": "C:\\Users\\Nam\\.nuget\\packages\\",
-        "outputPath": "D:\\Test-Task\\Client-API\\obj\\",
+        "projectPath": "d:\\TEST-DEMO\\RabbitMQ-Ex\\Client-API\\Client-API.csproj",
+        "packagesPath": "C:\\Users\\NamTran\\.nuget\\packages\\",
+        "outputPath": "d:\\TEST-DEMO\\RabbitMQ-Ex\\Client-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\NamTran\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"

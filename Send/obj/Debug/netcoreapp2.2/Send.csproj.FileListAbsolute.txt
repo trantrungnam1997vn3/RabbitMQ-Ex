@@ -9,3 +9,14 @@ D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.AssemblyInfoInputs.cache
 D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.AssemblyInfo.cs
 D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.dll
 D:\Test-Task\Send\obj\Debug\netcoreapp2.2\Send.pdb
+D:\TEST-DEMO\RabbitMQ-Ex\Send\bin\Debug\netcoreapp2.2\Send.deps.json
+D:\TEST-DEMO\RabbitMQ-Ex\Send\bin\Debug\netcoreapp2.2\Send.runtimeconfig.json
+D:\TEST-DEMO\RabbitMQ-Ex\Send\bin\Debug\netcoreapp2.2\Send.runtimeconfig.dev.json
+D:\TEST-DEMO\RabbitMQ-Ex\Send\bin\Debug\netcoreapp2.2\Send.dll
+D:\TEST-DEMO\RabbitMQ-Ex\Send\bin\Debug\netcoreapp2.2\Send.pdb
+D:\TEST-DEMO\RabbitMQ-Ex\Send\obj\Debug\netcoreapp2.2\Send.csprojAssemblyReference.cache
+D:\TEST-DEMO\RabbitMQ-Ex\Send\obj\Debug\netcoreapp2.2\Send.csproj.CoreCompileInputs.cache
+D:\TEST-DEMO\RabbitMQ-Ex\Send\obj\Debug\netcoreapp2.2\Send.AssemblyInfoInputs.cache
+D:\TEST-DEMO\RabbitMQ-Ex\Send\obj\Debug\netcoreapp2.2\Send.AssemblyInfo.cs
+D:\TEST-DEMO\RabbitMQ-Ex\Send\obj\Debug\netcoreapp2.2\Send.dll
+D:\TEST-DEMO\RabbitMQ-Ex\Send\obj\Debug\netcoreapp2.2\Send.pdb

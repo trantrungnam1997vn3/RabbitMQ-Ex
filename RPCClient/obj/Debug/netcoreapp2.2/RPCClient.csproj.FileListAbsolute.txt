@@ -9,3 +9,14 @@ D:\Test-Task\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.AssemblyInfoInputs.cach
 D:\Test-Task\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.AssemblyInfo.cs
 D:\Test-Task\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.dll
 D:\Test-Task\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.pdb
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\bin\Debug\netcoreapp2.2\RPCClient.deps.json
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\bin\Debug\netcoreapp2.2\RPCClient.runtimeconfig.json
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\bin\Debug\netcoreapp2.2\RPCClient.runtimeconfig.dev.json
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\bin\Debug\netcoreapp2.2\RPCClient.dll
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\bin\Debug\netcoreapp2.2\RPCClient.pdb
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.csprojAssemblyReference.cache
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.csproj.CoreCompileInputs.cache
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.AssemblyInfoInputs.cache
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.AssemblyInfo.cs
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.dll
+D:\TEST-DEMO\RabbitMQ-Ex\RPCClient\obj\Debug\netcoreapp2.2\RPCClient.pdb
