@@ -9,3 +9,14 @@ D:\TEST-DEMO\RabbitMQ-Ex\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.AssemblyInf
 D:\TEST-DEMO\RabbitMQ-Ex\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.AssemblyInfo.cs
 D:\TEST-DEMO\RabbitMQ-Ex\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.dll
 D:\TEST-DEMO\RabbitMQ-Ex\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.pdb
+D:\Test-Task\RPCServer\bin\Debug\netcoreapp2.2\RPCServer.deps.json
+D:\Test-Task\RPCServer\bin\Debug\netcoreapp2.2\RPCServer.runtimeconfig.json
+D:\Test-Task\RPCServer\bin\Debug\netcoreapp2.2\RPCServer.runtimeconfig.dev.json
+D:\Test-Task\RPCServer\bin\Debug\netcoreapp2.2\RPCServer.dll
+D:\Test-Task\RPCServer\bin\Debug\netcoreapp2.2\RPCServer.pdb
+D:\Test-Task\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.csprojAssemblyReference.cache
+D:\Test-Task\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.csproj.CoreCompileInputs.cache
+D:\Test-Task\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.AssemblyInfoInputs.cache
+D:\Test-Task\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.AssemblyInfo.cs
+D:\Test-Task\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.dll
+D:\Test-Task\RPCServer\obj\Debug\netcoreapp2.2\RPCServer.pdb
