@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TEST-DEMO\\RabbitMQ-Ex\\RPCClient\\RPCClient.csproj": {}
+    "D:\\Test-Task\\RPCClient\\RPCClient.csproj": {}
   },
   "projects": {
-    "D:\\TEST-DEMO\\RabbitMQ-Ex\\RPCClient\\RPCClient.csproj": {
+    "D:\\Test-Task\\RPCClient\\RPCClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TEST-DEMO\\RabbitMQ-Ex\\RPCClient\\RPCClient.csproj",
+        "projectUniqueName": "D:\\Test-Task\\RPCClient\\RPCClient.csproj",
         "projectName": "RPCClient",
-        "projectPath": "D:\\TEST-DEMO\\RabbitMQ-Ex\\RPCClient\\RPCClient.csproj",
-        "packagesPath": "C:\\Users\\NamTran\\.nuget\\packages\\",
-        "outputPath": "D:\\TEST-DEMO\\RabbitMQ-Ex\\RPCClient\\obj\\",
+        "projectPath": "D:\\Test-Task\\RPCClient\\RPCClient.csproj",
+        "packagesPath": "C:\\Users\\Nam\\.nuget\\packages\\",
+        "outputPath": "D:\\Test-Task\\RPCClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\NamTran\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nam\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"

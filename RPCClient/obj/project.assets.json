@@ -713,23 +713,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NamTran\\.nuget\\packages\\": {},
+    "C:\\Users\\Nam\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\TEST-DEMO\\RabbitMQ-Ex\\RPCClient\\RPCClient.csproj",
+      "projectUniqueName": "D:\\Test-Task\\RPCClient\\RPCClient.csproj",
       "projectName": "RPCClient",
-      "projectPath": "d:\\TEST-DEMO\\RabbitMQ-Ex\\RPCClient\\RPCClient.csproj",
-      "packagesPath": "C:\\Users\\NamTran\\.nuget\\packages\\",
-      "outputPath": "d:\\TEST-DEMO\\RabbitMQ-Ex\\RPCClient\\obj\\",
+      "projectPath": "D:\\Test-Task\\RPCClient\\RPCClient.csproj",
+      "packagesPath": "C:\\Users\\Nam\\.nuget\\packages\\",
+      "outputPath": "D:\\Test-Task\\RPCClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\NamTran\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Nam\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"

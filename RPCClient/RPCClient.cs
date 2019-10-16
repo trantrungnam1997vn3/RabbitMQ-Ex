@@ -17,7 +17,7 @@ namespace RPCClient
         private readonly IBasicProperties props;
         public RPCClient()
         {
-            var factory = new ConnectionFactory() { HostName = "localhost", Port = 5672, UserName = "admin", Password = "admin", VirtualHost = "/" };
+            var factory = new ConnectionFactory() { HostName = "10.0.1.222", Port = 5672, UserName = "admin", Password = "admin", VirtualHost = "/" };
 
             connection = factory.CreateConnection();
             channel = connection.CreateModel();
@@ -26,6 +26,8 @@ namespace RPCClient
 
             props = channel.CreateBasicProperties();
             var correlationId = Guid.NewGuid().ToString();
+            Console.WriteLine(correlationId);
+            Console.WriteLine(replyQueueName);
             props.CorrelationId = correlationId;
             props.ReplyTo = replyQueueName;
 
