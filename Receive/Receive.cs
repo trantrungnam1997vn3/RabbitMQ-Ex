@@ -10,7 +10,7 @@ namespace Receive
     {
         public static void Main(string[] args)
         {
-            var factory = new ConnectionFactory() { HostName = "localhost", Port = 5672, UserName = "admin", Password = "admin", VirtualHost = "/" };
+            var factory = new ConnectionFactory() { HostName = "10.0.1.222", Port = 5672, UserName = "admin", Password = "admin", VirtualHost = "/" };
             // MethodReceive1(args, factory);
             MethodReceiveWithTopic(args, factory);
 

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from "./App";
-import Chart from "./components/Chart";
+import Chat from "./components/Chat";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import BaseLayout from "./components/Site";
@@ -15,7 +15,7 @@ function Index() {
       <BaseLayout>
         <Switch>
           <Route exact path="/" component={App} />
-          <Route exact path="/chart" component={Chart} />
+          <Route exact path="/chat" component={Chat} />
           {/* <Route path="/women" component={Women} />
           <Route path="/men" component={Men} />
           <Route path="/clothes" component={Clothes} />

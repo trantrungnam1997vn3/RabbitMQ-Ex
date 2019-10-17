@@ -1,14 +1,24 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Nav, Site } from "tabler-react";
+import { Nav, Site, Icon } from "tabler-react";
 import "tabler-react/dist/Tabler.css";
 
 const SiteNav = () => {
   return (
     <React.Fragment>
-      <Nav.Item to="/" icon="globe" active value="Home"></Nav.Item>
-      <Nav.Item to="/chart" icon="globe" value="RabbitMQ"></Nav.Item>
-      <Nav.Item icon="globe" value="Other"></Nav.Item>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/">
+          <Icon name="user" />
+          Home
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/chat">
+          <Icon name="user" />
+          RabbitMQ
+        </NavLink>
+      </li>
+      {/* <NavLink icon="globe" value="Other"></NavLink> */}
     </React.Fragment>
   );
 };

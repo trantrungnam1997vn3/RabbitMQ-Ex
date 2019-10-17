@@ -21,11 +21,24 @@ namespace Client_API
         }
 
         public IConfiguration Configuration { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(
+                builder =>
+                {
+
+                    builder
+                    .WithOrigins("http://localhost:5000, http://localhost:3000")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+                });
+        });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,7 +53,11 @@ namespace Client_API
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            // app.UseCors(options => options.WithOrigins("http://localhost:5000", "http://localhost:3000"));
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
             app.UseHttpsRedirection();
             app.UseMvc();
         }
