@@ -15,7 +15,7 @@ namespace Client_API.Controllers
         public string Message { get; set; }
     }
 
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class MessageController : ControllerBase
     {
@@ -35,7 +35,7 @@ namespace Client_API.Controllers
 
         // POST api/values
         [HttpPost]
-        public Object CreateRabbitMQForUser(dynamic dynParam)
+        public Object SendMessageAsync(dynamic dynParam)
         {
 
             DTOMessagePost reqdata = JsonConvert.DeserializeObject<DTOMessagePost>(dynParam.reqdata.ToString());
@@ -43,6 +43,18 @@ namespace Client_API.Controllers
             Console.WriteLine(reqdata.Message);
             // return RabbitMQClient.Instance.SendMessage("go");
             return RabbitMQClient.Instance.SendMessageWithAsync(reqdata.Message);
+
+        }
+
+        [HttpPost]
+        public Object SendMessageSync(dynamic dynParam)
+        {
+
+            DTOMessagePost reqdata = JsonConvert.DeserializeObject<DTOMessagePost>(dynParam.reqdata.ToString());
+            // Console.WriteLine("DAy adasdasdsadasdasdasdasdsad");
+            Console.WriteLine(reqdata.Message);
+            // return RabbitMQClient.Instance.SendMessage("go");
+            return new {message = RabbitMQClient.Instance.SendMessageWithSync(reqdata.Message)};
 
         }
 

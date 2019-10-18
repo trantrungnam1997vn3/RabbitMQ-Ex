@@ -20,7 +20,6 @@ function Chart() {
   const [messageUser, setMessageUser] = useState([]);
 
   useEffect(() => {
-
     handleGetCorIdAndQueueName();
     createConnectionToWebSocket();
   }, [client]);
@@ -49,7 +48,7 @@ function Chart() {
     client.subscribe(
       // "/reply-queue/" + queueName,
 
-       "/exchange/direct_logs/amq.gen-0GwdxlIydlUjYJEWEU9n0Q",
+      "/exchange/direct_logs/amq.gen-q6H2y8gsj7MzPqcUn8LAuQ",
       // "/reply-queue/rpc_queue",
       function(b) {
         setMessageUser(messageUser => {
@@ -63,14 +62,14 @@ function Chart() {
       },
       {
         // "correlation-id": correlated_id
-        "correlation-id": "04b3a1d1-903a-4efa-870a-863b80aefc78" 
+        "correlation-id": "3097170f-4c18-4525-9fb9-9dca59ced14e"
       }
     );
 
     setClient(client);
   }
 
-  function handleSendMessage() {
+  function handleSendMessageAsync() {
     var headers = new Headers();
     headers.append("Content-Type", "application/json");
     headers.append("Accept", "application/json");
@@ -79,7 +78,7 @@ function Chart() {
 
     headers.append("GET", "POST", "OPTIONS");
 
-    fetch("http://localhost:5000/api/message", {
+    fetch("http://localhost:5000/api/message/SendMessageAsync", {
       method: "POST",
       mode: "cors",
       // credentials: "include",
@@ -98,12 +97,44 @@ function Chart() {
       .then(
         result => {
           console.log(result);
-          // setQueueName(result.name);
-          // queueNameVariable = result.name;
-          // correlated_idVariable = result.id;
-          // setCorrelatedId(result.id);
-          // createConnectionToWebSocket();
           ShowMessage("NAM", message, true);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+  }
+
+  function handleSendMessageSync() {
+    ShowMessage("NAM", message, true);
+    var headers = new Headers();
+    headers.append("Content-Type", "application/json");
+    headers.append("Accept", "application/json");
+    headers.append("Access-Control-Allow-Credentials", "true");
+    headers.append("Access-Control-Allow-Origin", "http://localhost:5000");
+
+    headers.append("GET", "POST", "OPTIONS");
+
+    fetch("http://localhost:5000/api/message/SendMessageSync", {
+      method: "POST",
+      mode: "cors",
+      // credentials: "include",
+      headers: {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Origin": "http://localhost:3000",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        reqdata: {
+          Message: message
+        }
+      })
+    })
+      .then(res => res.json())
+      .then(
+        result => {
+          console.log(result);
+          ShowMessage("BOT", result.message, false);
         },
         error => {
           console.log(error);
@@ -183,9 +214,20 @@ function Chart() {
             <Card.Options>
               <Form.InputGroup
                 append={
-                  <Button onClick={e => handleSendMessage()} color="primary">
-                    SEND
+                  <React.Fragment>
+                  <Button
+                    onClick={e => handleSendMessageAsync()}
+                    color="primary"
+                  >
+                    SEND WITH ASYNC
                   </Button>
+
+                  <Button
+                    onClick={e => handleSendMessageSync()}
+                    color="primary"
+                  >
+                    SEND WITH SYNC
+                  </Button></React.Fragment>
                 }
               >
                 <Form.Input
