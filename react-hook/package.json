@@ -8,7 +8,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "stompjs": "^2.3.3",
-    "tabler-react": "^1.30.1"
+    "tabler-react": "^1.30.1",
+    "uuid": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",

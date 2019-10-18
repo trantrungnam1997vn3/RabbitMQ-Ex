@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 import "./index.css";
 
@@ -9,23 +9,23 @@ function NavBar() {
       <div className="nav-links">
         <ul>
           <li>
-            <NavLink
+            <Link
               activeClassName="selected"
               className="nav-link"
               exact
               to="/"
             >
               Home
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
+            <Link
               activeClassName="selected"
               className="nav-link"
               to="/women"
             >
               Women
-            </NavLink>
+            </Link>
           </li>
           <li>
             <NavLink activeClassName="selected" className="nav-link" to="/men">

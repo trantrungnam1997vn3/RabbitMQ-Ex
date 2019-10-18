@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Reflection.Emit;
+using System.Data;
+using System;
 using System.Linq;
 using System.Text;
 using RabbitMQ.Client;
@@ -10,7 +12,7 @@ namespace Send
     {
         public static void Main(string[] args)
         {
-            var factory = new ConnectionFactory() { HostName = "localhost", Port = 5672, UserName = "admin", Password = "admin", VirtualHost = "/" };
+            var factory = new ConnectionFactory() { HostName = "10.0.1.222", Port = 5672, UserName = "admin", Password = "admin", VirtualHost = "/" };
 
 
             MethodSendWithTopic(args, factory);

@@ -29,7 +29,8 @@ namespace RPCClient
             Console.WriteLine(correlationId);
             Console.WriteLine(replyQueueName);
             props.CorrelationId = correlationId;
-            props.ReplyTo = replyQueueName;
+            // props.ReplyTo = replyQueueName;
+            props.ReplyTo = "nam";
 
             consumer.Received += (model, ea) =>
             {
@@ -44,10 +45,14 @@ namespace RPCClient
 
         public string Call(string message)
         {
+            channel.ExchangeDeclare(exchange: "topic_logs",
+                                    type: "topic");
+
             var messageBytes = Encoding.UTF8.GetBytes(message);
+            
             channel.BasicPublish(
-                exchange: "",
-                routingKey: "rpc_queue",
+                exchange: "topic_logs",
+                routingKey: "abcd",
                 basicProperties: props,
                 body: messageBytes);
 

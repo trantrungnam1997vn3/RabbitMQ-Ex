@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 /obj
 /bin
+=======
+/bin
+/obj
+
+.vscode
+>>>>>>> 7a2fb029806e7ebfd0e4726558b32775c236225a
