@@ -38,7 +38,8 @@ namespace Client_API.Service
             channel = connection.CreateModel();
             channel.ExchangeDeclare(exchange: "direct_logs", type: ExchangeType.Direct);
             replyQueueName = channel.QueueDeclare().QueueName;
-            // channel.QueueBind(replyQueueName, "direct_logs", replyQueueName);
+            channel.QueueBind(replyQueueName, "direct_logs", replyQueueName);
+
 
             consumer = new EventingBasicConsumer(channel);
 
@@ -54,6 +55,41 @@ namespace Client_API.Service
             props2 = channel.CreateBasicProperties();
             props2.CorrelationId = correlationId2;
             props2.ReplyTo = replyQueueName;
+
+            consumer.Received += (model, ea) =>
+            {
+                var body = ea.Body;
+                Console.WriteLine(ea.BasicProperties.CorrelationId);
+                var response = Encoding.UTF8.GetString(body);
+                if (ea.BasicProperties.CorrelationId == correlationId)
+                {
+                    Console.WriteLine("Receive 1");
+                    respQueue.Add(response);
+                }
+            };
+
+            consumer2.Received += (model, ea) =>
+            {
+                var body = ea.Body;
+                var response = Encoding.UTF8.GetString(body);
+                Console.WriteLine(ea.BasicProperties.CorrelationId);
+                if (ea.BasicProperties.CorrelationId == correlationId2)
+                {
+                    Console.WriteLine("Receive 2");
+                    respQueue.Add(response);
+                }
+            };
+            channel.BasicConsume(
+                            consumer: consumer,
+                            queue: replyQueueName,
+                            autoAck: false);
+
+
+            channel.BasicConsume(
+                consumer: consumer2,
+                queue: replyQueueName,
+                autoAck: false);
+
         }
 
         public Object GetCorrelateIDAndQueueName()
@@ -88,67 +124,66 @@ namespace Client_API.Service
                     respQueue.Add(response);
                 }
             };
+
+
         }
 
         public Object SendMessageWithSync(string message)
         {
 
-            consumer.Received += (model, ea) =>
-            {
-                var body = ea.Body;
-                Console.WriteLine(ea.BasicProperties.CorrelationId);
-                var response = Encoding.UTF8.GetString(body);
-                if (ea.BasicProperties.CorrelationId == correlationId)
-                {
-                    Console.WriteLine("Receive 1");
-                    respQueue.Add(response);
-                }
-            };
+            // consumer.Received += (model, ea) =>
+            // {
+            //     var body = ea.Body;
+            //     Console.WriteLine(ea.BasicProperties.CorrelationId);
+            //     var response = Encoding.UTF8.GetString(body);
+            //     if (ea.BasicProperties.CorrelationId == correlationId)
+            //     {
+            //         Console.WriteLine("Receive 1");
+            //         respQueue.Add(response);
+            //     }
+            // };
 
-            consumer2.Received += (model, ea) =>
-            {
-                var body = ea.Body;
-                var response = Encoding.UTF8.GetString(body);
-                Console.WriteLine(ea.BasicProperties.CorrelationId);
-                if (ea.BasicProperties.CorrelationId == correlationId2)
-                {
-                    Console.WriteLine("Receive 2");
-                    respQueue.Add(response);
-                }
-            };
+            // consumer2.Received += (model, ea) =>
+            // {
+            //     var body = ea.Body;
+            //     var response = Encoding.UTF8.GetString(body);
+            //     Console.WriteLine(ea.BasicProperties.CorrelationId);
+            //     if (ea.BasicProperties.CorrelationId == correlationId2)
+            //     {
+            //         Console.WriteLine("Receive 2");
+            //         respQueue.Add(response);
+            //     }
+            // };
 
 
             var messageBytes = Encoding.UTF8.GetBytes(message);
 
             channel.BasicPublish(
-                // exchange: "direct_logs",
-                exchange: "",
+                exchange: "direct_logs",
+                // exchange: "",
                 routingKey: "rpc_queue",
                 basicProperties: props,
                 body: messageBytes);
 
             channel.BasicPublish(
-                // exchange: "direct_logs",
-                exchange: "",
+                exchange: "direct_logs",
+                // exchange: "",
                 routingKey: "rpc_queue2",
                 basicProperties: props2,
                 body: messageBytes);
 
-            channel.BasicConsume(
-                consumer: consumer,
-                queue: replyQueueName,
-                autoAck: true);
+            // channel.BasicConsume(
+            //     consumer: consumer,
+            //     queue: replyQueueName,
+            //     autoAck: false);
 
 
-            channel.BasicConsume(
-                consumer: consumer2,
-                queue: replyQueueName,
-                autoAck: true);
+            // channel.BasicConsume(
+            //     consumer: consumer2,
+            //     queue: replyQueueName,
+            //     autoAck: false);
 
-            // var item = respQueue.Take();
-            // Console.WriteLine("value: " + item);
             return respQueue.Take() + respQueue.Take();
-            // return item;
         }
 
         public Object SendMessageWithAsync(string message)

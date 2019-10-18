@@ -1,11 +1,13 @@
-﻿using System;
+﻿using System.Diagnostics;
+using System.Threading;
+using System;
 using System.Linq;
 using System.Text;
-using System.Threading;
 
 using RabbitMQ.Client;
-
+using RPCServer;
 using RabbitMQ.Client.Events;
+using System.Collections.Generic;
 
 namespace RPCServer
 {
@@ -28,10 +30,6 @@ namespace RPCServer
                 channel.BasicConsume(queue: "rpc_queue",
                   autoAck: false, consumer: consumer);
                 Console.WriteLine(" [x] Awaiting RPC requests");
-
-
-
-
                 consumer.Received += (model, ea) =>
                 {
                     string response = null;
@@ -138,6 +136,7 @@ namespace RPCServer
         {
             Console.WriteLine("Go 1");
             Thread.Sleep(2000);
+            MutilProcessing();
             return "Hello" + name;
         }
 
@@ -148,5 +147,17 @@ namespace RPCServer
             Thread.Sleep(2000);
             return "Hello2" + name;
         }
+
+        public static void MutilProcessing() {
+            Action action = () => {
+                Console.WriteLine(Thread.CurrentThread.Name);
+            };
+            Action[] actions = new Action[] {};
+            actions.Append(action);
+            actions.Append(action);
+            actions.Append(action);
+            QueueProccess.Async(actions);
+        }
+
     }
 }

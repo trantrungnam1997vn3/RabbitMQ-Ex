@@ -48,7 +48,7 @@ function Chart() {
     client.subscribe(
       // "/reply-queue/" + queueName,
 
-      "/exchange/direct_logs/amq.gen-q6H2y8gsj7MzPqcUn8LAuQ",
+      "/exchange/direct_logs/amq.gen-DHW5M2w7yO6bs6VjXwXtgA",
       // "/reply-queue/rpc_queue",
       function(b) {
         setMessageUser(messageUser => {
